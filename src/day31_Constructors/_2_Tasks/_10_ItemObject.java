@@ -1,0 +1,1 @@
+package day31_Constructors._2_Tasks;public class _10_ItemObject {    public static void main(String[] args) {        _10_Item item = new _10_Item("mause",73.3, 7 );        System.out.println(item);  // _10_Item{name='mause', unitPrice=73.3, quantity=7, total price = $513.1}    }}

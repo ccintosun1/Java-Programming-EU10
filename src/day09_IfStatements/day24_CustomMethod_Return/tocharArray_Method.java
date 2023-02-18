@@ -1,0 +1,1 @@
+package day09_IfStatements.day24_CustomMethod_Return;public class tocharArray_Method {    public static void main(String[] args) {        String str = "aabbcbcshd";        String[] str1 = new String[str.length()];    }}

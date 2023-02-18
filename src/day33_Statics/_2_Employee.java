@@ -1,0 +1,1 @@
+package day33_Statics;public class _2_Employee {    public  String name;    public static double salary;    public static boolean isHuman = true;}

@@ -1,0 +1,1 @@
+package day28_ArrayList;public class _08_EqualsMethod {    public static void main(String[] args) {    }}

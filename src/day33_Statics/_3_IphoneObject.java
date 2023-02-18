@@ -1,0 +1,1 @@
+package day33_Statics;public class _3_IphoneObject {    public static void main(String[] args) {        System.out.println(_3_Iphone.OS);        _3_Iphone iphone1 = new _3_Iphone();    }}

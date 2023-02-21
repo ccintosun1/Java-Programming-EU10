@@ -1,4 +1,4 @@
-package day43_OOP_AbstractClasses;
+package day43_OOP_Abstraction;
 
 public class Employee extends Accountant {
 

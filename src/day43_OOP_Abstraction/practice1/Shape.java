@@ -1,4 +1,4 @@
-package day43_OOP_AbstractClasses.practice1;
+package day43_OOP_Abstraction.practice1;
 
 public abstract class Shape {
 

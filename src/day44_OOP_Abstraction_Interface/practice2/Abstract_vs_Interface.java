@@ -1,4 +1,4 @@
-package day44_OOP_Interface.practice2;
+package day44_OOP_Abstraction_Interface.practice2;
 
 //-------------------------- interface class ------------------------//
 interface A {

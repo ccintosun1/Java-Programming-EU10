@@ -1,6 +1,25 @@
 package day44_OOP_Abstraction_Interface.animalTask;
 
+/*
+class Test{
+    public static void main(String[] args) {
+
+        // ---- The differences getName and getSimpleName -----------//
+        System.out.println(new Test().getClass().getSimpleName()); // Test
+        System.out.println(new Test().getClass().getName());       // day44_OOP_Abstraction_Interface.animalTask.Test
+
+        //getName de package and subpackage nameini de yaziyor.
+
+
+
+    }
+
+}
+*/
+
 public abstract class Animal {
+
+
 
     //--------------- Atrributes--------------------//
     private String name;
@@ -26,14 +45,16 @@ public abstract class Animal {
     // NOT : constructor private olursa object create edilmez.
     public Animal(String name, String breed, char gender, int age, String size, String color) {
         setName(name);        // setter olanlara this.name = name yazmiyoruz. Cunku bunlarin degerleri setterdan gelicek
-        // setName methoduna gitsin kondition dogru ise buraya versin esitlensin diyor HARIKA
+                              // setName methoduna gitsin kondition dogru ise buraya versin esitlensin diyor HARIKA
         this.breed = breed;   // bunlar zaten final oldugu icin set edilme sansi yok sadece tek sefer value alirlar.
         if (!(gender == 'M' || gender == 'F')) {
             throw new RuntimeException("invalid gender : " + gender);
         }
         this.gender = gender;
+
         setAge(age);
         setSize(size);
+
         this.color = color;
     }
 
@@ -78,6 +99,27 @@ public abstract class Animal {
 
     public String getColor() {
         return color;
+    }
+
+    public final void drink(){        // cairildiginada tek sefer calisip name tek sefer alacagi ve direk sonuc cekecegi
+                                     // icin final olabilmekte
+        System.out.println(name + " is drinking");
+    }
+
+    public abstract void eat();    // abtract da body olmaz.
+
+
+    @Override
+    public String toString() {
+       // return "Animal " +   // eskisi
+        return getClass().getSimpleName() + "{" +   // Animal --> yenisi cunku boylece ilgili class in  basit ismini ve degerlerini otomatik ediyor.
+                "name='" + name + '\'' +
+                ", breed='" + breed + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                ", size='" + size + '\'' +
+                ", color='" + color + '\'' +
+                '}';
     }
 }
 
